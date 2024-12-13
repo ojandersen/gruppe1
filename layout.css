@@ -1,352 +1,232 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 1480px;
+  box-sizing: border-box;
 }
-
-main {
-  background-color: #000000;
-}
-
-.forside {
+body,
+html {
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0)
-    ),
-    /* gradient overlay */ url(/img/forside.jpg); /* background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  overflow-x: hidden;
 }
-/* HEADER */
 
-header {
+/* Header-styling */
+.navbar {
+  position: absolute; /* Gør headeren flydende over billedet */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  gap: 180px;
-  margin: 20px;
-}
-.logo a {
-  display: inline-block;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  z-index: 2; /* Sørger for at headeren er øverst */
 }
 
-nav ul {
+.logo img {
+  max-height: 90px;
+  width: auto;
+}
+
+.navbar nav ul {
   list-style: none;
   display: flex;
-  gap: 150px;
+  gap: 70px;
+  margin: 0;
+  padding: 0;
+}
+.navbar nav ul li {
+  display: inline;
 }
 
-header nav ul li a {
-  display: inline-block;
+.navbar nav ul li a {
   text-decoration: none;
-  color: #fff;
-  font-family: "Lexend Deca";
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-  color: #5a1c1c;
+.navbar nav ul li a:hover {
+  color: #f1220f;
 }
 
-.global-menu {
-  padding-left: 290px;
+.hero {
+  width: 100%;
+  height: 90vh; /* Fylder hele skærmen */
+  background: url("billeder/Skærmbillede\ 2024-12-10\ kl.\ 16.16.04.png")
+    no-repeat center center;
+  background-size: cover; /* Sørger for, at billedet dækker hele området */
+  position: relative;
+  opacity: 0.9;
 }
 
-#burger-toggle {
-  display: none;
-}
-
-.burger-menu {
-  display: none;
-  font-size: 3rem;
-}
-
-.overlay-text {
+.hero-content {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bolder;
 }
+.hero-content2 {
+  color: #fb0202;
+  padding-right: 80%;
 
-h1 {
-  font-size: 5em;
-  margin: 0;
-  width: 899px;
-  height: 170px;
-  flex-shrink: 0;
-  color: #fff;
-  text-align: center;
-  font-family: "Lakki Reddy";
-  font-size: 150px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 35px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.velkommen {
-  color: #fff;
-  font-family: "Lexend Deca";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  position: absolute;
-  top: -40%;
-  left: 30%;
-}
-
-.jungle {
-  color: #fff;
-  font-family: "Langar", system-ui;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  left: 50%;
-  position: absolute;
-  top: 80%;
-}
-
-h2 {
-  display: flex;
-  color: #fff;
-  text-align: center;
-  font-family: "Lexend Deca";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 50px; /* 166.667% */
-  letter-spacing: 0.6px;
-}
-h3 {
-  font-weight: 200;
-  font-family: "Lexend Deca";
-}
-
-h3 {
-  font-weight: 500;
-  font-family: "Lexend Deca";
-}
-.besøg {
-  display: flex;
-  justify-content: center;
-}
-
-/* Red square */
-.tekst1boks {
-  width: 100%; /* Full width of the viewport */
-  height: 200px; /* Adjust height as needed */
-  background-color: #7c2828; /* Red background color */
-  position: relative; /* Allows text to be positioned inside */
-}
-
-/* Text on the red square */
-.tekst1 {
-  color: #fff;
-  text-align: center;
-  font-family: "Lexend Deca";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0.6px;
-  padding-left: 250px;
-  padding-right: 250px;
-  padding-top: 50px;
-  background-color: #7c2828;
-  padding-bottom: 50px;
-}
-
-.panther {
-  position: absolute;
-  bottom: -70px;
-  right: 10px;
-  z-index: 1000;
-  pointer-events: none;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.drik {
-  width: 350px;
-  padding-left: 200px;
-}
-
-.forfør {
-  padding-top: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
 .menu {
-  margin-left: 300px;
-  margin-right: 100px;
-  background: #7c2828;
-  border: solid;
-  display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: "Lexend Deca";
-  font-size: 30px;
-  font-weight: 600;
+  padding: 40px;
+  text-align: center;
 }
 
-.instagram {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Ensure the container takes full width */
+.menu-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.grid_1-1-1-1 {
+/* Grid til drinks */
+.menu-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  color: white;
-  background-color: #7c2828;
-  justify-items: center;
-  padding: 30px;
-  text-align: center;
-  gap: 30px;
+  gap: 20px;
 }
 
-.følg img {
-  width: 50px;
-  padding: 10px;
-  height: 50px;
-}
-
-.smugbar img {
-  width: 300px;
-}
-
-.logo_1-1-1-1 {
+.menu-gridvin {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  color: white;
-  justify-items: center;
-  padding: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+/* Styling til hver cocktail */
+.menu-item {
+  background-color: #111; /* Mørk grå baggrund */
+  border: 2px dashed #c43030; /* Punkteret kant */
+  padding: 80px 20px;
+  height: 360px;
+  border-radius: 8px;
   text-align: center;
-  gap: 30px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.price {
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px; /* Afstand fra bunden */
+  text-align: center;
+  left: 75%;
+  color: #f9f8c3;
+  font-size: 1.2rem;
+}
+
+.menu-item:hover {
+  transform: scale(1.05); /* Effekt ved hover */
+}
+
+.menu-item h2 {
+  color: #ff0000; /* Rød overskrift */
+  font-size: 1.5rem;
+  top: 20px;
+  position: absolute;
+  text-align: center;
+}
+
+.menu-item p {
+  color: #f9f8c3;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 0%;
+  line-height: 2.2rem;
+}
+
+.price {
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px; /* Afstand fra bunden */
+  text-align: center;
+  left: 45%;
+  color: #f9f8c3;
+  font-size: 1.2rem;
+}
+.vin {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 40px;
+  padding-right: 90%;
+}
+.øl {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 40px;
+  padding-right: 90%;
 }
 
 @media (max-width: 768px) {
-  /* header */
+  /* Skærmstørrelser på 768px eller mindre */
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* To drinks ved siden af hinanden */
+  }
+  .menu-gridvin {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-item h2 {
+    font-size: 1rem;
+    top: 10px;
+  }
 
-  body,
-  html {
-    overflow-x: hidden;
-  }
-  .burger-menu {
-    display: block;
-    color: #ffffff;
+  .menu-item p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    line-height: 1.6rem;
   }
 
-  nav ul {
-    display: none;
+  .price {
+    bottom: 10px; /* Afstand fra bunden */
+    left: 45%;
+    font-size: 12px;
   }
-  #burger-toggle:checked + label + nav ul {
-    display: block;
-  }
-  nav a {
-    display: inline-block;
-    font-size: 1.5em;
-    font-size: 1.3em;
-  }
-  header nav ul li {
-    background: #7c2828;
-    padding: 5px;
-    border: double #6e4242;
-    border-radius: 10px;
-    border-width: 5px;
-    margin: 5px;
+  .menu-item {
+    padding: 40px 20px;
+    height: 300px;
+    width: 170px;
+    border-radius: 8px;
     text-align: center;
+    position: relative;
   }
-  header nav ul li:hover {
-    background-color: #5a1c1c;
-  }
-  .global-menu {
-    padding-left: 0px;
+  .navbar {
+    padding-right: 20px;
   }
 
-  .logo img {
-    width: 130px;
+  .navbar nav ul {
+    gap: 20px;
   }
 
-  /* forside */
-  .velkommen {
-    font-size: 20px;
+  .navbar nav ul li a {
+    font-size: 14px;
+  }
+  .hero {
+    width: 100%;
+    height: 50vh; /* billedet */
+  }
+
+  .hero-content {
     position: absolute;
-    top: -28%;
-    left: 40%;
-  }
-
-  .jungle {
-    left: 50%;
-    position: absolute;
-    top: 80%;
-    left: 40%;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  .jungle {
+    top: 55%; /* Centrerer teksten vertikalt */
+    left: 32%; /* Centrerer teksten horisontalt */
+    transform: translate(-50%, -50%);
     font-size: 20px;
-    top: 40px;
+    padding: 100%;
   }
-  .panther {
-    bottom: -60px;
-    right: 70px;
-  }
-  .panther img {
-    width: 200px;
-  }
-
-  .drik {
-    width: 200px;
-    padding-left: 130px;
-  }
-
-  .forfør {
-    width: 300px;
-    font-size: 17px;
-  }
-
-  .menu {
-    margin: 0;
-  }
-
-  .tekst1 {
-    text-align: s;
-    font-size: 13px;
-    padding-left: 0px;
-  }
-
-  .logo_1-1-1-1 {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-  }
-  .logo_1-1-1-1 img {
-    width: 100px;
-  }
-  .grid_1-1-1-1 {
-    display: block;
-  }
-
-  .grid_1-1 {
-    display: block;
+  .hero-content2 {
+    font-size: 30px;
+    font-weight: 100;
   }
 }
