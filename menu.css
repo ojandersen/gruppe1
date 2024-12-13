@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+/* Header-styling */
+.navbar {
+  position: absolute; /* Gør headeren flydende over billedet */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  z-index: 2; /* Sørger for at headeren er øverst */
+}
+
+.logo img {
+  max-height: 90px;
+  width: auto;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+  margin: 0;
+  padding: 0;
+}
+.navbar nav ul li {
+  display: inline;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #f1220f;
+}
+
+.hero {
+  width: 100%;
+  height: 90vh; /* Fylder hele skærmen */
+  background: url("billeder/Skærmbillede\ 2024-12-10\ kl.\ 16.16.04.png")
+    no-repeat center center;
+  background-size: cover; /* Sørger for, at billedet dækker hele området */
+  position: relative;
+  opacity: 0.9;
+}
+
+.hero-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bolder;
+}
+.hero-content2 {
+  color: #fb0202;
+  padding-right: 80%;
+
+  font-size: 35px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+  padding: 40px;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Grid til drinks */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.menu-gridvin {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+/* Styling til hver cocktail */
+.menu-item {
+  background-color: #111; /* Mørk grå baggrund */
+  border: 2px dashed #c43030; /* Punkteret kant */
+  padding: 80px 20px;
+  height: 360px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.price {
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px; /* Afstand fra bunden */
+  text-align: center;
+  left: 75%;
+  color: #f9f8c3;
+  font-size: 1.2rem;
+}
+
+.menu-item:hover {
+  transform: scale(1.05); /* Effekt ved hover */
+}
+
+.menu-item h2 {
+  color: #ff0000; /* Rød overskrift */
+  font-size: 1.5rem;
+  top: 20px;
+  position: absolute;
+  text-align: center;
+}
+
+.menu-item p {
+  color: #f9f8c3;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 0%;
+  line-height: 2.2rem;
+}
+
+.price {
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px; /* Afstand fra bunden */
+  text-align: center;
+  left: 45%;
+  color: #f9f8c3;
+  font-size: 1.2rem;
+}
+.vin {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 40px;
+  padding-right: 90%;
+}
+.øl {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 40px;
+  padding-right: 90%;
+}
+
+@media (max-width: 768px) {
+  /* Skærmstørrelser på 768px eller mindre */
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* To drinks ved siden af hinanden */
+  }
+  .menu-gridvin {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-item h2 {
+    font-size: 1rem;
+    top: 10px;
+  }
+
+  .menu-item p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    line-height: 1.6rem;
+  }
+
+  .price {
+    bottom: 10px; /* Afstand fra bunden */
+    left: 45%;
+    font-size: 12px;
+  }
+  .menu-item {
+    padding: 40px 20px;
+    height: 300px;
+    width: 170px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+  }
+  .navbar {
+    padding-right: 20px;
+  }
+
+  .navbar nav ul {
+    gap: 20px;
+  }
+
+  .navbar nav ul li a {
+    font-size: 14px;
+  }
+  .hero {
+    width: 100%;
+    height: 50vh; /* billedet */
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 55%; /* Centrerer teksten vertikalt */
+    left: 32%; /* Centrerer teksten horisontalt */
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    padding: 100%;
+  }
+  .hero-content2 {
+    font-size: 30px;
+    font-weight: 100;
+  }
+}
