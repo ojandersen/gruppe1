@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+main {
+  background-color: #000000;
+}
+
+.forside {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    ),
+    url(/img/forside.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 5em;
+  margin: 0;
+  width: 899px;
+  height: 170px;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Lakki Reddy";
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.velkommen {
+  color: #fff;
+  font-family: "Lexend Deca";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  top: -40%;
+  left: 30%;
+}
+
+.jungle {
+  color: #fff;
+  font-family: "Langar", system-ui;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  left: 50%;
+  position: absolute;
+  top: 80%;
+}
+
+h2 {
+  display: flex;
+  color: #fff;
+  text-align: center;
+  font-family: "Lexend Deca";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+}
+h3 {
+  font-weight: 200;
+  font-family: "Lexend Deca";
+}
+
+h3 {
+  font-weight: 500;
+  font-family: "Lexend Deca";
+}
+.besøg {
+  display: flex;
+  justify-content: center;
+}
+
+.tekst1boks {
+  width: 100%;
+  background-color: #7c2828;
+  position: relative;
+}
+.tekst1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Lexend Deca";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.6px;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 50px;
+  background-color: #7c2828;
+  padding-bottom: 50px;
+}
+
+.panther {
+  position: absolute;
+  bottom: -70px;
+  right: 10px;
+  z-index: 1000;
+  pointer-events: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.drik {
+  width: 350px;
+  padding-left: 200px;
+}
+
+.forfør {
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.menu {
+  margin-left: 300px;
+  margin-right: 100px;
+  background: #7c2828;
+  border: solid;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Lexend Deca";
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.følg img {
+  width: 50px;
+  padding: 10px;
+  height: 50px;
+}
+
+.smugbar img {
+  width: 300px;
+}
+
+.logo_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: white;
+  justify-items: center;
+  padding: 30px;
+  text-align: center;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  /* header */
+
+  body,
+  html {
+    overflow-x: hidden;
+    width: 760px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* forside */
+  .velkommen {
+    font-size: 20px;
+    position: absolute;
+    top: -28%;
+    left: 40%;
+  }
+
+  .jungle {
+    left: 50%;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .jungle {
+    font-size: 20px;
+    top: 40px;
+  }
+  .panther {
+    bottom: -60px;
+    right: 70px;
+  }
+  .panther img {
+    width: 200px;
+  }
+
+  .drik {
+    width: 250px;
+    padding-left: 250px;
+  }
+
+  .forfør {
+    font-size: 17px;
+  }
+
+  .instagram {
+    width: 1000px;
+  }
+
+  .tekst1 {
+    text-align: center;
+    font-size: 13px;
+    padding-left: 25px;
+    padding-right: 50px;
+  }
+
+  .logo_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  .logo_1-1-1-1 img {
+    width: 100px;
+  }
+  .grid_1-1-1-1 {
+    display: block;
+  }
+
+  .grid_1-1 {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  body,
+  html {
+    overflow-x: hidden;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+  }
+  .tekst1 {
+    padding-left: 15px;
+    padding-right: 55px;
+  }
+
+  .drik {
+    padding-left: 100px;
+  }
+
+  .forfør {
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 50px;
+  }
+  .menu {
+    margin-left: 170px;
+  }
+  .logo_1-1-1-1 {
+    gap: 0px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+  .smugbar img {
+    width: 150px;
+  }
+
+  .følg img {
+    width: 40px;
+    height: auto;
+  }
+}
