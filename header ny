@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.logo {
+  margin: -50px;
+  margin-left: -190px;
+}
+
+nav ul {
+  display: flex;
+  gap: 150px;
+}
+
+header nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lexend Deca";
+}
+
+header nav ul li a:hover {
+  color: #5a1c1c;
+}
+
+.global-menu {
+  padding-left: 290px;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 3rem;
+}
+
+.overlay-text {
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
