@@ -154,4 +154,7 @@ header nav ul li a:hover {
   .global-menu {
     padding-left: 0;
   }
+  .grid_1-1 {
+    display: block;
+  }
 }
