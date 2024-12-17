@@ -61,6 +61,32 @@ header nav ul li a:hover {
   gap: 30px;
 }
 
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.følg img {
+  width: 50px;
+  padding: 10px;
+  height: 50px;
+}
+
+.smugbar img {
+  width: 300px;
+}
+
+.h4 {
+  font-family: "Lexend Deca";
+}
+
 @media (max-width: 768px) {
   /* HEADER */
   body,
