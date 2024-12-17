@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="da">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="menu.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/lakki-reddy" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Langar&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="navbar">
@@ -31,7 +46,7 @@
       </div>
       <div class="menu-grid">
         <div class="menu-item">
-          <h2>Afterlife</h2>
+          <h2 id="signatur">Afterlife</h2>
           <p>
             Chartreuse, Mezcal og hyldeblomstlikør rystet med limesaft,
             sukkersirup og Whammy sauce. Toppet med danskvand og serveret med
@@ -40,7 +55,7 @@
           <span class="price">95 kr</span>
         </div>
         <div class="menu-item">
-          <h2>Blueberry Clover</h2>
+          <h2 id="signatur">Blueberry Clover</h2>
           <p>
             Friske blåbær muddlet med gin og rystet med vermouth, æggehvide,
             citronsaft og sukkersirup. Pyntet med agurk og blåbær.
@@ -56,7 +71,7 @@
           <span class="price">95 kr</span>
         </div>
         <div class="menu-item">
-          <h2>Housekeeper</h2>
+          <h2 id="signatur">Housekeeper</h2>
           <p>
             Johnnie Walker Black Labet rystet med frisk agurk, citronsaft,
             sukkersirup og hyldeblomstlikør. Pyntet med agurk og blomst.
@@ -64,7 +79,7 @@
           <span class="price">95 kr</span>
         </div>
         <div class="menu-item">
-          <h2>Paulita</h2>
+          <h2 id="signatur">Paulita</h2>
           <p>
             Pisco og Aperol rystet med citronsaft, sukkersirup og æggehvide,
             Pyntet med appelsinskal og amarenakirsebær
@@ -80,7 +95,7 @@
           <span class="price">95 kr</span>
         </div>
         <div class="menu-item">
-          <h2>Power Sour</h2>
+          <h2 id="signatur">Power Sour</h2>
           <p>
             Fernet Branca og Chartreuse Jaune rystet med citronsaft, sukkersirup
             og æggehvide.
@@ -88,7 +103,7 @@
           <span class="price">95 kr</span>
         </div>
         <div class="menu-item">
-          <h2>Phantom Hooch</h2>
+          <h2 id="signatur">Phantom Hooch</h2>
           <p>
             Bourbon og Fantom Bitter rystet med limesaft, honning og æggehvide.
             Pyntet med appelsinskal og blomst.
@@ -104,8 +119,8 @@
           <span class="price">95 kr</span>
         </div>
         <div class="menu-item">
-          <h2>SKULL ISLAND</h2>
-          <p>
+          <h2 id="signatur">SKULL ISLAND</h2>
+          <p id="skull-island">
             En dele-cocktail for 2… eller 3. Serveret i et kranieglas med en
             brændende ø. Rom, cognac og dram rystet med lime juice, frisk mynte
             og sukkersirup. Spicet op med Onkel G's Whammy sauce og Angostura.
@@ -122,35 +137,68 @@
         </div>
         <div class="menu-item">
           <h2>MÅNEDENS COCKTAIL</h2>
-          <p>Bliver udskiftet hver måned.</p>
+          <p id="månedens">?</p>
           <span class="price">95 kr</span>
+        </div>
+      </div>
+      <div class="booze">
+        <h2>BOOZE</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu2-item">
+          <h2>SJUSSER</h2>
+          <p>5 cl alkohol</p>
+          <span class="price">85 kr.</span>
+        </div>
+        <div class="menu2-item">
+          <h2>SPIRITUS</h2>
+          <p>3cl eller 5cl</p>
+          <span class="price">45/65 kr.</span>
+        </div>
+        <div class="menu2-item">
+          <h2>LUKSUS</h2>
+          <span class="price">50/70 kr.</span>
+        </div>
+        <div class="menu2-item">
+          <h2>PREMIUM</h2>
+          <span class="price">65/90 kr.</span>
+        </div>
+        <div class="menu2-item">
+          <h2>RUSSIAN COCAINE</h2>
+          <p>Vodka-shot m. citron, kaffe og sukker-bid</p>
+          <span class="price">50 kr.</span>
+        </div>
+        <div class="menu2-item">
+          <h2>FANTOM DRAM</h2>
+          <p>Husets Fantom DRAM</p>
+          <span class="price">50 kr.</span>
         </div>
       </div>
       <div class="vin">
         <h2>VIN</h2>
       </div>
       <div class="menu-gridvin">
-        <div class="menu-item">
+        <div class="menu3-item">
           <h2>KUNG FU GIRL</h2>
           <p>Riesling. Charles Smith</p>
           <span class="price">Glas 70 kr 1/1 Flaske 350kr.</span>
         </div>
-        <div class="menu-item">
+        <div class="menu3-item">
           <h2>BAND OF ROSES</h2>
           <p>Pinot Gris. Charles Smith</p>
           <span class="price">Glas 70 kr 1/1 Flaske 350kr.</span>
         </div>
-        <div class="menu-item">
+        <div class="menu3-item">
           <h2>ENGRESCADA</h2>
           <p>Orangevin. Marina, Muscat & Xarel-lo Raimones. Spanien.</p>
           <span class="price">Glas 70 kr 1/1 Flaske 350kr.</span>
         </div>
-        <div class="menu-item">
+        <div class="menu3-item">
           <h2>VELVET DEVIL</h2>
           <p>Merlot. Chales Smith.</p>
           <span class="price">Glas 70 kr 1/1 Flaske 350kr.</span>
         </div>
-        <div class="menu-item">
+        <div class="menu3-item">
           <h2>BODEGAS PEQUEÑOS</h2>
           <p>Cava Brut</p>
           <span class="price">Glas 60 kr 1/1 Flaske 290kr.</span>
@@ -160,51 +208,172 @@
         <h2>ØL</h2>
       </div>
       <div class="menu-grid">
-        <div class="menu-item">
+        <div class="menu2-item">
           <h2>FADØL</h2>
           <p>TUBORG GRØN/ CLASSIC</p>
-
           <span class="price">55 kr</span>
         </div>
-        <div class="menu-item">
-          <h2>GUINNESS</h2>
+        <div class="menu2-item">
+          <h2>FADØL</h2>
+          <p>GUINNESS</p>
           <span class="price">60 kr</span>
         </div>
-        <div class="menu-item">
-          <h2>KRONENBOURG 1664 BLANC</h2>
+        <div class="menu2-item">
+          <h2>FADØL</h2>
+          <p>KRONENBOURG 1664 BLANC</p>
           <span class="price">60 kr</span>
         </div>
-        <div class="menu-item">
-          <h2>BROOKLYN PULP ART HAZY IPA</h2>
+        <div class="menu2-item">
+          <h2>FADØL</h2>
+          <p>BROOKLYN PULP ART HAZY IPA</p>
           <span class="price">60 kr</span>
         </div>
-        <div class="menu-item">
-          <h2>BROOKLYN SPECIAL EFFECTS (non-alko)</h2>
+        <div class="menu2-item">
+          <h2>FADØL</h2>
+          <p>BROOKLYN SPECIAL EFFECTS (non-alko)</p>
           <span class="price">60 kr</span>
         </div>
-        <div class="menu-item">
-          <h2>JACOBSEN HELLES BIER</h2>
+        <div class="menu2-item">
+          <h2>FADØL</h2>
+          <p>JACOBSEN HELLES BIER</p>
           <span class="price">60 kr</span>
         </div>
-        <div class="menu-item">
-          <h2>Afterlife</h2>
+        <div class="menu2-item">
+          <h2>FLASKEØL</h2>
+          <p>WIIBROE</p>
+          <span class="price">40 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>FLASKEØL</h2>
+          <p>Guld Tuborg</p>
+          <span class="price">50 kr</span>
+        </div>
+      </div>
+      <div class="sodavand">
+        <h2>SOFT BEVERAGES</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu2-item">
+          <h2>LEMONADE</h2>
+          <p>Hjemmelavet m/u bobler - vælge mynte el. ingefær</p>
+          <span class="price">45 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>DANSKVAND</h2>
+          <span class="price">25 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>GINGERBEER</h2>
+          <span class="price">30 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>TONIC</h2>
+          <span class="price">30 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>COCA COLA</h2>
+          <span class="price">30 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>COCA COLA ZERO</h2>
+          <span class="price">30 kr</span>
+        </div>
+      </div>
+      <div class="snacks">
+        <h2>CHIPS OG NØDDER</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu2-item">
+          <h2>PIPERS CHIPS</h2>
+          <p>Sea salt</p>
+          <span class="price">25 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>PIPERS CHIPS</h2>
+          <p>Cider vinegar & Sea salt</p>
+          <span class="price">25 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>PIPERS CHIPS</h2>
+          <p>Cheddar & Onion</p>
+          <span class="price">25 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>FIDDLE'S MANDLER</h2>
+          <p>Ristet m. karamel</p>
+          <span class="price">29 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>FIDDLE'S MANDLER</h2>
+          <p>Ristet m. saltkaramel</p>
+          <span class="price">29 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>FIDDLE'S PEANUTS/CASHEW</h2>
+          <p>M. røget paprika</p>
+          <span class="price">29 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2>FIDDLE'S PEANUTS/CASHEW</h2>
+          <p>M. chili & lime</p>
+          <span class="price">29 kr</span>
+        </div>
+      </div>
+      <div class="sauce">
+        <h2>ONKEL G'S HOT SAUCE</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu2-item">
+          <h2 id="signatur">WHAMMY SAUCE</h2>
+          <p>Habanero, Carolina reaper & peperrod</p>
+          <span class="price">85 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2 id="signatur">CHIMNEY SAUCE</h2>
+          <p>Røget chipotle & ancho</p>
+          <span class="price">85 kr</span>
+        </div>
+        <div class="menu2-item">
+          <h2 id="signatur">BLACK TORNADO</h2>
+          <p>Habanero & Carolina reaper</p>
           <p>
-            Chartreuse, Mezcal og hyldeblomstlikør rystet med limesaft,
-            sukkersirup og Whammy sauce. Toppet med danskvand og serveret med
-            sugarspiced kant.
+            <span class="price">85 kr</span>
           </p>
-          <span class="price">95 kr</span>
-        </div>
-        <div class="menu-item">
-          <h2>Afterlife</h2>
-          <p>
-            Chartreuse, Mezcal og hyldeblomstlikør rystet med limesaft,
-            sukkersirup og Whammy sauce. Toppet med danskvand og serveret med
-            sugarspiced kant.
-          </p>
-          <span class="price">95 kr</span>
         </div>
       </div>
     </section>
+    <footer>
+      <section class="grid_1-1-1-1">
+        <div class="åbningstider">
+          <h3>Åbningstider</h3>
+          <h4>Torsdag: 19:00-02:00</h4>
+          <h4>Fredag-Lørdag: 19:00-03:00</h4>
+          <h4>ALDERSGRÆNSE 18+</h4>
+        </div>
+        <div class="kontakt">
+          <h3>Kontakt os</h3>
+          <h4>E-mail: info@fantombar.dk</h4>
+          <h4>Telefon: +45 XX XX XX XX</h4>
+          <h4>Adresse: Griffenfeldsgade 6, 2200 København N</h4>
+        </div>
+        <div class="følg">
+          <h3>Følg med på</h3>
+          <a href="https://www.instagram.com/fantombarcph/" target="_blank">
+            <img src="billeder/insta.png" alt="" />
+          </a>
+          <a
+            href="https://www.facebook.com/fantombarcph2200/?locale=da_DK"
+            target="_blank"
+          >
+            <img src="billeder/facebook.png" alt="" />
+          </a>
+        </div>
+        <div class="smugbar">
+          <a href="https://smugbar.dk/" target="_blank">
+            <img src="billeder/smugbar.png" alt="" />
+          </a>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
