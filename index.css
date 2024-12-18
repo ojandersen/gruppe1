@@ -72,12 +72,9 @@ h2 {
   line-height: 50px;
   letter-spacing: 0.6px;
 }
-h3 {
-  font-weight: 200;
-  font-family: "Lexend Deca";
-}
 
-h3 {
+h3,
+h4 {
   font-weight: 500;
   font-family: "Lexend Deca";
 }
