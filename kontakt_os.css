@@ -23,6 +23,7 @@ body {
 h1 {
   font-size: 80px;
   margin: 0;
+  font-family: "Lakki reddy", sans-serif;
 }
 
 /* Main */
@@ -118,7 +119,7 @@ h1 {
   .baggrund {
     background-position: top;
     background-size: cover;
-    padding: -20px;
+    /* padding: -20px; */
   }
 
   /* Juster overskrift */
