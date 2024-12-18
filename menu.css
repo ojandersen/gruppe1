@@ -13,77 +13,90 @@ html {
 }
 
 /* Header-styling */
-.navbar {
-  position: absolute; /* Gør headeren flydende over billedet */
-  top: 0;
-  left: 0;
-  width: 100%;
+
+header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  color: #fff;
-  z-index: 2; /* Sørger for at headeren er øverst */
 }
 
-.logo img {
-  max-height: 90px;
-  width: auto;
+.logo {
+  display: inline-block;
+  text-align: center;
+  margin-top: -20px;
+  z-index: 4;
 }
 
-.navbar nav ul {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 70px;
-  margin: 0;
-  padding: 0;
-}
-.navbar nav ul li {
-  display: inline;
+  gap: 150px;
+  padding-top: -80px;
 }
 
-.navbar nav ul li a {
+header nav ul li a {
+  display: inline-block;
   text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  transition: color 0.3s;
+  color: #fff;
+  font-family: "Lexend Deca";
 }
 
-.navbar nav ul li a:hover {
-  color: #f1220f;
+header nav ul li a:hover {
+  color: #5a1c1c;
 }
 
-.hero {
-  width: 100%;
-  height: 90vh; /* Fylder hele skærmen */
-  background: url("billeder/Skærmbillede\ 2024-12-10\ kl.\ 16.16.04.png")
-    no-repeat center center;
-  background-size: cover; /* Sørger for, at billedet dækker hele området */
-  position: relative;
-  opacity: 0.9;
+.global-menu {
+  padding-left: 490px;
+  padding-top: 50px;
 }
 
-.hero-content {
+#burger-toggle {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 3rem;
+}
+
+.overlay-text {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
-  font-size: 50px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bolder;
+}
+
+.hero {
+  height: 100vh; /* Fylder hele skærmhøjden */
+  width: 100%; /* Fylder hele bredden */
+  background-image: url("billeder/bar2.jpg"); /* Sørg for at baggrunden er billedet */
+  background-size: cover; /* Billedet fylder hele containeren */
+  background-position: center; /* Centrerer billedet */
+  display: flex; /* Gør det muligt at centrere indhold */
+  justify-content: center; /* Centrerer indhold vandret */
+  align-items: center; /* Centrerer indhold lodret */
+  overflow: hidden;
+  z-index: 1;
+  margin-top: -180px;
+}
+
+/* Hero content (overskrift) */
+.hero-content {
+  text-align: center; /* Centrerer teksten */
+  color: white; /* Gør teksten synlig ovenpå billedet */
+  font-size: 4.5rem; /* Juster størrelsen efter behov */
+  margin: 0; /* Nulstil margin */
+  font-family: "Lexand Deca";
 }
 .hero-content2 {
   color: #fb0202;
   padding-right: 80%;
 
-  font-size: 35px;
+  font-size: 55px;
   font-weight: 100;
   font-family: Arial, Helvetica, sans-serif;
 }
 .menu {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -115,14 +128,64 @@ html {
   text-align: center;
   position: relative;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+.menu2-item {
+  background-color: #111; /* Mørk grå baggrund */
+  border: 2px dashed #c43030; /* Punkteret kant */
+  padding: 80px 20px;
+  height: 230px;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+.menu2-item h2 {
+  color: #f9f8c3;
+  font-size: 30px;
+  top: 20px;
+  position: absolute;
 }
 
+.menu2-item p {
+  color: #f9f8c3;
+  font-size: 18px;
+  padding: 0%;
+  line-height: 2.2rem;
+  top: 35px;
+}
+.menu3-item {
+  background-color: #111; /* Mørk grå baggrund */
+  border: 2px dashed #c43030; /* Punkteret kant */
+  padding: 80px 20px;
+  height: 280px;
+  border-radius: 8px;
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+.menu3-item h2 {
+  color: #f9f8c3;
+  font-size: 21px;
+  top: 20px;
+  position: absolute;
+}
+
+.menu3-item p {
+  color: #f9f8c3;
+  font-size: 18px;
+  padding: 0%;
+  line-height: 2.2rem;
+}
 .price {
   font-weight: bold;
-  position: absolute;
+  /* position: absolute; */
   bottom: 10px; /* Afstand fra bunden */
-  text-align: center;
-  left: 75%;
+  /* text-align: center;
+  left: 75%; */
   color: #f9f8c3;
   font-size: 1.2rem;
 }
@@ -130,9 +193,15 @@ html {
 .menu-item:hover {
   transform: scale(1.05); /* Effekt ved hover */
 }
+.menu2-item:hover {
+  transform: scale(1.05); /* Effekt ved hover */
+}
+.menu3-item:hover {
+  transform: scale(1.05); /* Effekt ved hover */
+}
 
 .menu-item h2 {
-  color: #ff0000; /* Rød overskrift */
+  color: #f9f8c3;
   font-size: 1.5rem;
   top: 20px;
   position: absolute;
@@ -142,9 +211,8 @@ html {
 .menu-item p {
   color: #f9f8c3;
   font-size: 18px;
-  margin-bottom: 15px;
   padding: 0%;
-  line-height: 2.2rem;
+  line-height: 2.5rem;
 }
 
 .price {
@@ -159,14 +227,91 @@ html {
 .vin {
   color: #ff0000;
   padding-top: 5%;
-  font-size: 40px;
+  font-size: 55px;
   padding-right: 90%;
 }
 .øl {
   color: #ff0000;
   padding-top: 5%;
-  font-size: 40px;
-  padding-right: 90%;
+  font-size: 55px;
+  padding-right: 92%;
+}
+.sodavand {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 55px;
+  padding-right: 45%;
+}
+.snacks {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 55px;
+  padding-right: 43%;
+}
+.sauce {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 55px;
+  padding-right: 30%;
+}
+.booze {
+  color: #ff0000;
+  padding-top: 5%;
+  font-size: 55px;
+  padding-right: 85%;
+}
+#månedens {
+  font-size: 80px;
+  padding-top: 20%;
+  line-height: 1.6rem;
+  color: #f9f8c3;
+}
+#skull-island {
+  color: #f9f8c3;
+  font-size: 16px;
+  padding: 0%;
+  line-height: 2.2rem;
+}
+#signatur {
+  color: #ff0000;
+}
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: white;
+  background-color: #7c2828;
+  justify-items: center;
+  padding: 40px;
+  text-align: center;
+  gap: 30px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.følg img {
+  width: 90px;
+  padding: 10px;
+  height: 90px;
+}
+
+.smugbar img {
+  width: 300px;
+}
+
+.h4 {
+  font-family: "Lexend Deca";
 }
 
 @media (max-width: 768px) {
@@ -191,15 +336,44 @@ html {
   .price {
     bottom: 10px; /* Afstand fra bunden */
     left: 45%;
-    font-size: 12px;
+    font-size: 14px;
   }
   .menu-item {
     padding: 40px 20px;
-    height: 300px;
-    width: 170px;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
+    height: 240px;
+    width: 200px;
+  }
+  .menu2-item {
+    padding: 40px 20px;
+    height: 180px;
+    width: 200px;
+  }
+  .menu2-item h2 {
+    font-size: 1rem;
+  }
+
+  .menu2-item p {
+    font-size: 12px;
+    padding-top: 10%;
+  }
+  .menu3-item {
+    padding: 40px 20px;
+    height: 180px;
+    width: 200px;
+  }
+  .menu3-item h2 {
+    font-size: 1rem;
+  }
+
+  .menu3-item p {
+    font-size: 12px;
+    padding-top: 10%;
+  }
+
+  .månedens {
+    font-size: 40px;
+    margin-bottom: 15px;
+    line-height: 1.6rem;
   }
   .navbar {
     padding-right: 20px;
@@ -214,19 +388,95 @@ html {
   }
   .hero {
     width: 100%;
-    height: 50vh; /* billedet */
+    height: 60vh;
   }
 
   .hero-content {
-    position: absolute;
-    top: 55%; /* Centrerer teksten vertikalt */
-    left: 32%; /* Centrerer teksten horisontalt */
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    padding: 100%;
+    font-size: 25px;
+    padding: 0 5px;
   }
+
   .hero-content2 {
     font-size: 30px;
     font-weight: 100;
+  }
+  #månedens {
+    font-size: 50px;
+    padding-top: 40%;
+  }
+  #skull-island {
+    font-size: 12px;
+    padding: 0%;
+    line-height: 1.2rem;
+  }
+  .vin {
+    color: #ff0000;
+    padding-top: 10%;
+    font-size: 30px;
+    padding-right: 90%;
+  }
+  .øl {
+    color: #ff0000;
+    padding-top: 10%;
+    font-size: 30px;
+    padding-right: 90%;
+  }
+  .sodavand {
+    font-size: 28px;
+    padding-right: 5%;
+    padding-top: 10%;
+  }
+  .snacks {
+    font-size: 28px;
+    padding-right: 2%;
+    padding-top: 5%;
+  }
+  .sauce {
+    font-size: 23px;
+    padding: 0%;
+    padding-top: 10%;
+  }
+  .booze {
+    font-size: 30px;
+    padding-top: 10%;
+  }
+  .logo {
+    width: 5px;
+  }
+  .grid_1-1-1-1 {
+    display: block;
+  }
+  .burger-menu {
+    display: block;
+    color: #ffffff;
+    padding-left: 180px;
+    padding-top: -190px;
+  }
+
+  nav ul {
+    display: none;
+  }
+  #burger-toggle:checked + label + nav ul {
+    display: block;
+  }
+  nav a {
+    display: inline-block;
+    font-size: 1.5em;
+    font-size: 1.3em;
+  }
+  header nav ul li {
+    background: #7c2828;
+    padding: 5px;
+    border: double #6e4242;
+    border-radius: 10px;
+    border-width: 5px;
+    margin: 5px;
+    text-align: center;
+  }
+  header nav ul li:hover {
+    background-color: #5a1c1c;
+  }
+  .global-menu {
+    padding-left: 200px;
   }
 }
