@@ -3,13 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="css/layout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/lakki-reddy" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Langar&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="img/T3.svg" type="x-icon" />
     <title>Om os</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="logo">
+        <a href="http://forside.html">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+          <dotlottie-player src="https://lottie.host/72922e43-9107-4811-8d91-8be7517598dd/1ueRQF7RBy.lottie" background="transparent" speed="1" style="width: 250px; height: 250px" loop autoplay></dotlottie-player>
+        </a>
+      </div>
+      <div class="global-menu">
+        <input type="checkbox" id="burger-toggle" />
+        <label for="burger-toggle" class="burger-menu">☰</label>
+        <nav>
+          <ul>
+            <li><a href="http://127.0.0.1:5500/index.html">Forside</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Menu</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Om os</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <section class="grid_1">
         <h1>OM OS</h1>
@@ -27,31 +53,196 @@
         </div>
       </section>
       <section class="billed_container">
-        <img src="img/dj.png" alt="dj" />
-        <img src="img/dj.png" alt="dj" />
-        <img src="img/dj.png" alt="dj" />
-        <img src="img/dj.png" alt="dj" />
+        <img src="img/bar1.jpg" alt="dj" />
+        <img src="img/bar1.jpg" alt="dj" />
+        <img src="img/bar1.jpg" alt="dj" />
+        <img src="img/bar1.jpg" alt="dj" />
       </section>
       <h2>Besøg også søster-barerne</h2>
       <section class="grid_1-1-1-1">
         <div>
-          <img src="img/nr1.png" alt="bar1" />
+          <div>
+            <a href="https://www.whammybar.dk" target="_blank">
+              <img src="img/nr1.png" alt="bar1" />
+            </a>
+          </div>
           <p>Østrigsgade 13 - Amar</p>
         </div>
         <div>
-          <img src="img/nr2.png" alt="bar2" />
+          <div>
+            <a href="https://www.theflatiron.dk/" target="_blank">
+              <img src="img/nr2.png" alt="bar2" />
+            </a>
+          </div>
           <p>Birkegade 10 - Nbro</p>
         </div>
         <div>
-          <img src="img/nr3.png" alt="bar3" />
+          <div>
+            <a href="http://www.themudhoney.dk/" target="_blank">
+              <img src="img/nr3.png" alt="bar3" />
+            </a>
+          </div>
           <p>Guldbergsgade 22 - Nbro</p>
         </div>
         <div>
-          <img src="img/nr4.png" alt="bar4" />
+          <div>
+            <a href="https://smugbar.dk/hjem/tahongalounge" target="_blank">
+              <img src="img/nr4.png" alt="bar4" />
+            </a>
+          </div>
           <p>Torvet 1 - Hillerød</p>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Åbningstider</h3>
+          <p>Torsdag: 19:00-02:00</p>
+          <p>Fredag-Lørdag: 19:00-03:00</p>
+          <p>ALDERSGRÆNSE 18+</p>
+        </div>
+        <div class="footer-column">
+          <h3>Kontakt os</h3>
+          <p>E-mail: info@fantombar.dk</p>
+          <p>Telefon: +45 XX XX XX XX</p>
+          <p>Adresse: Griffenfeldsgade 6, 2200 København N</p>
+        </div>
+        <div class="footer-column">
+          <h3>Følg med på</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/fantombarcph/">
+              <p>Instagram</p>
+            </a>
+            <a href="https://www.facebook.com/fantombarcph2200">
+              <p>Facebook</p>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <a href="https://smugbar.dk">
+            <img src="img/smugbar.png" alt="Fantom Bar Logo" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      class Login extends HTMLElement {
+        constructor() {
+          super();
+          this.attachShadow({
+            mode: "open",
+          }); //apparently slots only work with the shadow dom?
+        }
+        connectedCallback() {
+          this.html = `<style>
+            /****** LOGIN MODAL ******/
+            #login-modal {
+                background:black;
+                position:fixed;
+                width:100vw;
+                height:100vh;
+            }
+            .loginmodal-container {
+              padding: 30px;
+              max-width: 350px;
+              width: 100% !important;
+              background-color: #F7F7F7;
+              margin: 0 auto;
+              border-radius: 2px;
+              box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+              overflow: hidden;
+              font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue", Arial, sans-serif;
+            }
+            .loginmodal-container h1 {
+              text-align: center;
+              font-size: 1.8em;
+            }
+            .loginmodal-container input[type=submit] {
+              width: 100%;
+              display: block;
+              margin-bottom: 10px;
+              position: relative;
+            }
+            input[type=password] {
+              height: 44px;
+              font-size: 16px;
+              width: 100%;
+              margin-bottom: 10px;
+              -webkit-appearance: none;
+              background: #fff;
+              border: 1px solid #d9d9d9;
+              border-top: 1px solid #c0c0c0;
+              padding: 0 8px;
+              box-sizing: border-box;
+            }
+            input[type=password]:hover {
+              border: 1px solid #b9b9b9;
+              border-top: 1px solid #a0a0a0;
+              box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+            }
+            .loginmodal {
+              text-align: center;
+              font-size: 14px;
+              font-weight: 700;
+              height: 36px;
+              padding: 0 8px;
+            }
+            .loginmodal-submit {
+              border: 0px;
+              color: #fff;
+              text-shadow: 0 1px rgba(0,0,0,0.1); 
+              background-color: #4d90fe;
+              padding: 17px 0px;
+              font-size: 14px;
+            }
+            .loginmodal-submit:hover {
+              border: 0px;
+              text-shadow: 0 1px rgba(0,0,0,0.3);
+              background-color: #357ae8;
+            }
+          </style>
+          <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="loginmodal-container">
+                <h1>Login</h1><br>
+                <p>This is a school project</p>
+                <p>The password is <code>kea</code></p>
+                <form>
+                  <input type="password" name="pass" placeholder="Password">
+                  <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                </form>
+              </div>
+            </div>
+          </div>`;
+          this.render();
+
+          this.shadowRoot.querySelector("form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (this.shadowRoot.querySelector("input[name=pass]").value === "kea") {
+              document.querySelector("#totally-delete-me").remove();
+              localStorage.setItem("iform-totally-logged-in", true);
+            }
+          });
+        }
+        render() {
+          this.shadowRoot.innerHTML = this.html;
+        }
+      }
+      customElements.define("iform-login", Login);
+      window.addEventListener("load", () => {
+        if (!localStorage.getItem("iform-totally-logged-in")) {
+          const div = document.createElement("div");
+          div.id = "totally-delete-me";
+          div.style.width = "100vw";
+          div.style.height = "100vh";
+          div.style.position = "fixed";
+          div.style.zIndex = "9999";
+
+          div.innerHTML = "<iform-login />";
+          document.body.prepend(div);
+        }
+      });
+    </script>
   </body>
 </html>
