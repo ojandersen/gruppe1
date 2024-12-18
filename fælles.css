@@ -27,8 +27,9 @@ header nav ul li a {
   font-family: "Lexend Deca";
 }
 
+/* *****************farven */
 header nav ul li a:hover {
-  color: #5a1c1c;
+  color: #7c2828;
 }
 
 .global-menu {
@@ -82,6 +83,10 @@ header nav ul li a:hover {
   height: 50px;
 }
 
+.følg img a:hover {
+  color: #7c2828;
+}
+
 .smugbar img {
   width: 300px;
 }
@@ -90,6 +95,11 @@ header nav ul li a:hover {
   font-family: "Lexend Deca";
 }
 
+/* *************************************************** */
+/* Smooth transition for responsiveness */
+* {
+  transition: all 0.2s ease-in-out; /* Smooth transition for all properties */
+}
 @media (max-width: 768px) {
   /* HEADER */
   body,

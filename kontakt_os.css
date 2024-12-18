@@ -1,100 +1,156 @@
 body {
-  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
   margin: 0;
   padding: 0;
   background-color: black;
   color: #ffffff;
-  max-width: 1664px;
 }
-.headermain {
-  background-image: url(../img/image.png);
+
+.baggrund {
+  width: 100%;
+  min-height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    ),
+    url(../img/image2.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  height: 750px;
-  margin-bottom: 50px;
+  background-repeat: no-repeat;
 }
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-header .logo-container img {
-  width: 200px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 10rem;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
+h1 {
+  font-size: 80px;
+  margin: 0;
 }
 
 /* Main */
 .contact {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 150px;
+  padding-bottom: 50px; /* Tilføjer luft under teksten */
+  padding-left: 15px;
+  padding-right: 60px;
+}
+
+.contact h1 {
+  margin-bottom: 30px; /* Øger afstanden under overskriften */
+}
+
+.contact p {
+  line-height: 2;
 }
 
 .social-icons img {
   width: 50px;
+  margin: 20px 15px;
 }
 
-address {
+.small-line-height p {
+  line-height: 1; /* Juster linjeafstanden (1.2 er mindre end standard) */
   font-style: normal;
 }
 
 .map-container {
-  position: relative;
+  position: relative; /* Gør det muligt at positionere billedet absolut */
+  width: 100%;
+  max-width: 1200px; /* Begrænser kortets bredde */
+  margin: 0 auto; /* Centrerer kortet */
 }
 
-.map-image {
-  width: 80%;
-  justify-content: center;
+.map-title {
+  text-align: center; /* Centrerer teksten */
+  margin-top: 35px;
+  margin-bottom: -35px;
 }
 
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  display: block;
+  padding: 50px 0px;
+}
+
+/* Panther-overlay */
 .panther-overlay {
   position: absolute;
-  bottom: 5px;
-  right: 3px;
-  width: 120px;
+  bottom: 0px;
+  right: 26px;
+  width: 200px; /* Standard størrelse */
+  height: auto;
+  transition: transform 0.3s ease; /* Glat overgang ved skalering */
 }
 
-/* Footer */
-.footer-container {
-  display: flex;
-  gap: 1rem;
-  background: #7c2828;
-  padding: 1.5rem 0;
+/* Medium skærme (tablets) */
+@media (max-width: 1024px) {
+  .panther-overlay {
+    transform: scale(0.8); /* Reducer størrelsen til 80% */
+    bottom: -20px;
+    right: 0px;
+  }
 }
 
-.footer-column {
-  flex: 1;
-  text-align: center;
+/* Små skærme (store telefoner) */
+@media (max-width: 768px) {
+  .panther-overlay {
+    transform: scale(0.6); /* Reducer størrelsen til 60% */
+    bottom: -60px;
+    right: 0px;
+  }
 }
 
-.footer-column img {
-  width: 100%;
+/* Ekstra små skærme (små telefoner) */
+@media (max-width: 480px) {
+  .panther-overlay {
+    transform: scale(0.4); /* Reducer størrelsen til 40% */
+    bottom: -80px;
+    right: 0px;
+  }
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
+/* *********************************************** */
+/* Mobilvenlig tilpasning for små skærme */
+@media (max-width: 768px) {
+  /* Juster baggrund */
+  .baggrund {
+    background-position: top;
+    background-size: cover;
+    padding: -20px;
+  }
 
-.social-icons img {
-  width: 50px;
+  /* Juster overskrift */
+  h1 {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+
+  /* Juster tekst */
+  .contact {
+    padding: 130px -30px;
+  }
+
+  .contact p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Sociale ikoner */
+  .social-icons img {
+    width: 30px;
+    margin: 10px;
+  }
+
+  /* Kort og panter */
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .panther-overlay {
+    width: 130px; /* Reducer størrelsen */
+    bottom: -38px;
+    right: 20px;
+  }
 }
