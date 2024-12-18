@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -12,49 +11,18 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
 /* Header-styling */
 
 header {
   display: flex;
-}
-
-.logo {
-  display: inline-block;
-  text-align: center;
-  margin-top: -20px;
-  z-index: 4;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 150px;
-  padding-top: -80px;
-}
-
-header nav ul li a {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  font-family: "Lexend Deca";
-}
-
-header nav ul li a:hover {
-  color: #5a1c1c;
-}
-
-.global-menu {
-  padding-left: 490px;
-  padding-top: 50px;
-}
-
-#burger-toggle {
-  display: none;
-}
-
-.burger-menu {
-  display: none;
-  font-size: 3rem;
+  position: absolute;
 }
 
 .overlay-text {
@@ -68,7 +36,7 @@ header nav ul li a:hover {
 .hero {
   height: 100vh; /* Fylder hele skærmhøjden */
   width: 100%; /* Fylder hele bredden */
-  background-image: url("billeder/bar2.jpg"); /* Sørg for at baggrunden er billedet */
+  background-image: url("/img/slide2.jpg"); /* Sørg for at baggrunden er billedet */
   background-size: cover; /* Billedet fylder hele containeren */
   background-position: center; /* Centrerer billedet */
   display: flex; /* Gør det muligt at centrere indhold */
@@ -94,6 +62,7 @@ header nav ul li a:hover {
   font-size: 55px;
   font-weight: 100;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -70px;
 }
 .menu {
   padding: 20px;
@@ -229,36 +198,41 @@ header nav ul li a:hover {
   padding-top: 5%;
   font-size: 55px;
   padding-right: 90%;
+  margin-bottom: -70px;
 }
 .øl {
   color: #ff0000;
-  padding-top: 5%;
   font-size: 55px;
   padding-right: 92%;
+  margin-bottom: -70px;
 }
 .sodavand {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
   padding-right: 45%;
+  margin-bottom: -70px;
 }
 .snacks {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
   padding-right: 43%;
+  margin-bottom: -70px;
 }
 .sauce {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
   padding-right: 30%;
+  margin-bottom: -70px;
 }
 .booze {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
   padding-right: 85%;
+  margin-bottom: -70px;
 }
 #månedens {
   font-size: 80px;
@@ -275,39 +249,10 @@ header nav ul li a:hover {
 #signatur {
   color: #ff0000;
 }
-.grid_1-1-1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  color: white;
-  background-color: #7c2828;
-  justify-items: center;
-  padding: 40px;
-  text-align: center;
-  gap: 30px;
-  font-size: 20px;
-  line-height: 40px;
-}
-
-.instagram {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.følg img {
-  width: 90px;
-  padding: 10px;
-  height: 90px;
-}
-
-.smugbar img {
-  width: 300px;
 }
 
 .h4 {
@@ -331,6 +276,15 @@ header nav ul li a:hover {
     font-size: 12px;
     margin-bottom: 15px;
     line-height: 1.6rem;
+  }
+  .vin,
+  .øl,
+  .sodavand,
+  .snacks,
+  .sauce,
+  .booze,
+  .hero-content2 {
+    margin-bottom: 0px;
   }
 
   .price {
@@ -375,17 +329,7 @@ header nav ul li a:hover {
     margin-bottom: 15px;
     line-height: 1.6rem;
   }
-  .navbar {
-    padding-right: 20px;
-  }
 
-  .navbar nav ul {
-    gap: 20px;
-  }
-
-  .navbar nav ul li a {
-    font-size: 14px;
-  }
   .hero {
     width: 100%;
     height: 60vh;
@@ -446,37 +390,13 @@ header nav ul li a:hover {
   .grid_1-1-1-1 {
     display: block;
   }
+  .hero-content {
+    padding-top: 300px;
+  }
   .burger-menu {
-    display: block;
-    color: #ffffff;
-    padding-left: 180px;
-    padding-top: -190px;
+    padding-left: 150px;
   }
-
   nav ul {
-    display: none;
-  }
-  #burger-toggle:checked + label + nav ul {
-    display: block;
-  }
-  nav a {
-    display: inline-block;
-    font-size: 1.5em;
-    font-size: 1.3em;
-  }
-  header nav ul li {
-    background: #7c2828;
-    padding: 5px;
-    border: double #6e4242;
-    border-radius: 10px;
-    border-width: 5px;
-    margin: 5px;
-    text-align: center;
-  }
-  header nav ul li:hover {
-    background-color: #5a1c1c;
-  }
-  .global-menu {
-    padding-left: 200px;
+    padding-left: 150px;
   }
 }
