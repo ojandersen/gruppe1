@@ -20,12 +20,6 @@ body {
   background-repeat: no-repeat;
 }
 
-h1 {
-  font-size: 80px;
-  margin: 0;
-  font-family: "Lakki reddy", sans-serif;
-}
-
 /* Main */
 .contact {
   max-width: 700px;
@@ -38,7 +32,10 @@ h1 {
 }
 
 .contact h1 {
-  margin-bottom: 30px; /* Øger afstanden under overskriften */
+  font-size: 80px;
+  margin-bottom: -25px;
+  margin-top: 25px;
+  font-family: "Lakki reddy", sans-serif;
 }
 
 .contact p {
@@ -46,8 +43,8 @@ h1 {
 }
 
 .social-icons img {
-  width: 50px;
-  margin: 20px 15px;
+  width: 60px;
+  margin: 15px 15px;
 }
 
 .small-line-height p {
@@ -92,6 +89,9 @@ h1 {
     bottom: -20px;
     right: 0px;
   }
+  .contact h1 {
+    font-size: 70px; /* Reduceret størrelse */
+  }
 }
 
 /* Små skærme (store telefoner) */
@@ -101,6 +101,11 @@ h1 {
     bottom: -60px;
     right: 0px;
   }
+  .contact h1 {
+    font-size: 60px; /* Reduceret yderligere */
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
 }
 
 /* Ekstra små skærme (små telefoner) */
@@ -109,6 +114,11 @@ h1 {
     transform: scale(0.4); /* Reducer størrelsen til 40% */
     bottom: -80px;
     right: 0px;
+  }
+  .contact h1 {
+    font-size: 50px; /* Mindste størrelse */
+    margin-top: 20px;
+    margin-bottom: -20px;
   }
 }
 
@@ -137,7 +147,7 @@ h1 {
 
   /* Sociale ikoner */
   .social-icons img {
-    width: 30px;
+    width: 40px;
     margin: 10px;
   }
 
