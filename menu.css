@@ -2,12 +2,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body,
 html {
   width: 100%;
   height: 100%;
-  font-family: "Lexend Deca";
   background-color: black;
   overflow-x: hidden;
 }
@@ -22,6 +20,7 @@ body {
 /* Header-styling */
 
 header {
+  display: flex;
   position: absolute;
 }
 
@@ -29,16 +28,17 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 .hero {
-  height: 100%; /* Fylder hele skærmhøjden */
+  height: 100vh; /* Fylder hele skærmhøjden */
   width: 100%; /* Fylder hele bredden */
-  background-image: url("billeder/bar2.jpg"); /* Sørg for at baggrunden er billedet */
-  background-size: cover;
+  background-image: url("/img/bar2.jpg"); /* Sørg for at baggrunden er billedet */
+  background-size: cover; /* Billedet fylder hele containeren */
   background-position: center; /* Centrerer billedet */
-  display: flex;
+  display: flex; /* Gør det muligt at centrere indhold */
   justify-content: center; /* Centrerer indhold vandret */
   align-items: center; /* Centrerer indhold lodret */
   overflow: hidden;
@@ -51,21 +51,29 @@ header {
   color: white; /* Gør teksten synlig ovenpå billedet */
   font-size: 4.5rem; /* Juster størrelsen efter behov */
   margin: 0; /* Nulstil margin */
-  font-family: "Lexand Deca";
+  font-family: "Lakki Reddy";
 }
 .hero-content2 {
   color: #fb0202;
   padding-right: 80%;
-  font-family: "Lexand Deca";
+
   font-size: 55px;
   font-weight: 100;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: -70px;
   font-family: "Lexand Deca";
+  margin-bottom: -70px;
 }
 .menu {
   padding: 20px;
   text-align: center;
+  font-family: "Lexend Deca";
+}
+
+.signatur_drinks {
+  position: absolute;
+  color: #ff0000;
+  padding-left: 900px;
+  font-family: "Lexend Deca";
+  font-size: 16px;
 }
 
 .menu-title {
@@ -98,7 +106,6 @@ header {
   transition: transform 0.3s ease;
   display: flex;
   justify-content: center;
-  font-family: "Lexand Deca";
 }
 .menu2-item {
   background-color: #111; /* Mørk grå baggrund */
@@ -110,14 +117,12 @@ header {
   transition: transform 0.3s ease;
   display: flex;
   justify-content: center;
-  font-family: "Lexand Deca";
 }
 .menu2-item h2 {
   color: #f9f8c3;
   font-size: 30px;
   top: 20px;
   position: absolute;
-  font-family: "Lexand Deca";
 }
 
 .menu2-item p {
@@ -126,7 +131,6 @@ header {
   padding: 0%;
   line-height: 2.2rem;
   top: 35px;
-  font-family: "Lexand Deca";
 }
 .menu3-item {
   background-color: #111; /* Mørk grå baggrund */
@@ -138,13 +142,11 @@ header {
   transition: transform 0.3s ease;
   display: flex;
   justify-content: center;
-  font-family: "Lexand Deca";
 }
 .menu3-item h2 {
   color: #f9f8c3;
   font-size: 21px;
   top: 20px;
-  font-family: "Lexand Deca";
   position: absolute;
 }
 
@@ -153,17 +155,15 @@ header {
   font-size: 18px;
   padding: 0%;
   line-height: 2.2rem;
-  font-family: "Lexand Deca";
 }
-
-.menu-item:hover {
-  transform: scale(1.05); /* Effekt ved hover */
-}
-.menu2-item:hover {
-  transform: scale(1.05); /* Effekt ved hover */
-}
-.menu3-item:hover {
-  transform: scale(1.05); /* Effekt ved hover */
+.price {
+  font-weight: bold;
+  /* position: absolute; */
+  bottom: 10px; /* Afstand fra bunden */
+  /* text-align: center;
+  left: 75%; */
+  color: #f9f8c3;
+  font-size: 1.2rem;
 }
 
 .menu-item h2 {
@@ -172,7 +172,6 @@ header {
   top: 20px;
   position: absolute;
   text-align: center;
-  font-family: "Lexand Deca";
 }
 
 .menu-item p {
@@ -180,7 +179,6 @@ header {
   font-size: 18px;
   padding: 0%;
   line-height: 2.5rem;
-  font-family: "Lexand Deca";
 }
 
 .price {
@@ -191,14 +189,12 @@ header {
   left: 45%;
   color: #f9f8c3;
   font-size: 1.2rem;
-  font-family: "Lexand Deca";
 }
 .vin {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
   padding-right: 90%;
-  font-family: "Lexand Deca";
   margin-bottom: -70px;
 }
 .øl {
@@ -206,21 +202,18 @@ header {
   font-size: 55px;
   padding-right: 92%;
   margin-bottom: -70px;
-  font-family: "Lexand Deca";
 }
 .sodavand {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
   padding-right: 45%;
-  font-family: "Lexand Deca";
   margin-bottom: -70px;
 }
 .snacks {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
-  font-family: "Lexand Deca";
   padding-right: 43%;
   margin-bottom: -70px;
 }
@@ -228,7 +221,6 @@ header {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
-  font-family: "Lexand Deca";
   padding-right: 30%;
   margin-bottom: -70px;
 }
@@ -236,14 +228,12 @@ header {
   color: #ff0000;
   padding-top: 5%;
   font-size: 55px;
-  font-family: "Lexand Deca";
   padding-right: 85%;
   margin-bottom: -70px;
 }
 #månedens {
   font-size: 80px;
   padding-top: 20%;
-  font-family: "Lexand Deca";
   line-height: 1.6rem;
   color: #f9f8c3;
 }
@@ -251,48 +241,10 @@ header {
   color: #f9f8c3;
   font-size: 16px;
   padding: 0%;
-  font-family: "Lexand Deca";
   line-height: 2.2rem;
 }
 #signatur {
   color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur2 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur3 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur4 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur5 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur6 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur7 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur8 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur9 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
-}
-#signatur10 {
-  color: #ff0000;
-  font-family: "Lexand Deca";
 }
 
 .grid_1-1 {
@@ -316,6 +268,7 @@ header {
     font-size: 1rem;
     top: 10px;
   }
+
   .menu {
     margin-right: 60px;
     margin-left: -10px;
@@ -334,6 +287,7 @@ header {
   .booze,
   .hero-content2 {
     margin-bottom: -30px;
+    font-family: "Lakki Reddy";
   }
 
   .price {
@@ -358,7 +312,6 @@ header {
   .menu2-item p {
     font-size: 12px;
     padding-top: 10%;
-    line-height: 20px;
   }
   .menu3-item {
     padding: 40px 20px;
@@ -372,13 +325,17 @@ header {
   .menu3-item p {
     font-size: 12px;
     padding-top: 10%;
-    line-height: 20px;
   }
 
   .månedens {
     font-size: 40px;
     margin-bottom: 15px;
     line-height: 1.6rem;
+  }
+
+  .signatur_drinks {
+    padding-left: 190px;
+    font-size: 8px;
   }
 
   .hero {
@@ -389,7 +346,6 @@ header {
   .hero-content {
     font-size: 25px;
     padding: 0 5px;
-    margin-top: -250px;
   }
 
   .hero-content2 {
@@ -442,9 +398,7 @@ header {
   .grid_1-1-1-1 {
     display: block;
   }
-  .hero-content {
-    padding-top: 300px;
-  }
+
   .burger-menu {
     padding-left: 150px;
   }
